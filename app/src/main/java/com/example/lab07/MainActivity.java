@@ -21,23 +21,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Инициализация элементов UI
         edUsername = findViewById(R.id.ed_username);
         edPassword = findViewById(R.id.ed_password);
         btnLogin = findViewById(R.id.btn_login);
         btnSignUp = findViewById(R.id.btn_signup);
 
-        // Переход на страницу регистрации
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Переход на экран регистрации
                 Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
                 startActivity(intent);
             }
         });
 
-        // Логика авторизации
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 if (strUsername != null && strUsername.equals(username_from_ed)) {
                     if (strPassword != null && strPassword.equals(password_from_ed)) {
                         Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, FileActivity.class); // Переход на экран работы с файлами
+                        Intent intent = new Intent(MainActivity.this, FileActivity.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
