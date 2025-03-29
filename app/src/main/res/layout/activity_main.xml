@@ -32,6 +32,7 @@
             android:id="@+id/ed_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Login"
             android:inputType="text"
             android:backgroundTint="@color/gray"
             android:layout_marginBottom="12dp" />
@@ -40,25 +41,26 @@
             android:id="@+id/ed_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Password"
             android:inputType="textPassword"
             android:backgroundTint="@color/gray"
             android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ENTER"
-            android:backgroundTint="#000000"
+            android:backgroundTint="#ff4747"
             android:textColor="@color/white"
             android:layout_marginBottom="8dp" />
 
         <Button
             android:id="@+id/btn_signup"
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SIGN UP"
-            android:backgroundTint="#000000"
+            android:backgroundTint="#673AB7"
             android:textColor="@color/white" />
     </LinearLayout>
 

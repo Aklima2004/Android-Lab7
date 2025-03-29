@@ -32,6 +32,7 @@
             android:id="@+id/ed_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Login"
             android:inputType="text"
             android:backgroundTint="@color/gray"
             android:layout_marginBottom="12dp" />
@@ -40,6 +41,7 @@
             android:id="@+id/ed_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Password"
             android:inputType="textPassword"
             android:backgroundTint="@color/gray"
             android:layout_marginBottom="12dp" />
@@ -48,16 +50,17 @@
             android:id="@+id/ed_confirm_pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Repeat Password"
             android:inputType="textPassword"
             android:backgroundTint="@color/gray"
             android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/btn_create_user"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CREATE USER"
-            android:backgroundTint="#000000"
+            android:backgroundTint="#673AB7"
             android:textColor="@color/white" />
     </LinearLayout>
 
