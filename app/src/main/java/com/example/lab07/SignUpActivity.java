@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SignUpActivity extends AppCompatActivity {
+
     private EditText edUsername, edPassword, edConfirmPassword;
     private Button btnCreateUser;
     private final String CREDENTIAL_SHARED_PREF = "our_shared_pref";
@@ -31,6 +32,11 @@ public class SignUpActivity extends AppCompatActivity {
                 String strUsername = edUsername.getText().toString();
                 String strPassword = edPassword.getText().toString();
                 String strConfirmPassword = edConfirmPassword.getText().toString();
+
+                if (strUsername.isEmpty() || strPassword.isEmpty() || strConfirmPassword.isEmpty()) {
+                    Toast.makeText(SignUpActivity.this, "All fields must be filled in", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 if (strPassword.equals(strConfirmPassword)) {
                     SharedPreferences credentials = getSharedPreferences(CREDENTIAL_SHARED_PREF, Context.MODE_PRIVATE);
